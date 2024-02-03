@@ -6,26 +6,38 @@
 
     <table class="table table-striped">
         <tr>
-            <th>Title</th>
-            <td>{{$book->title}}</td>
+            <th>ID</th>
+            <td>{{$employee->id}}</td>
         </tr>
         <tr>
-            <th>ISBN No</th>
-            <td>{{$book->isbn}}</td>
+            <th>Name</th>
+            <td>{{$employee->name}}</td>
         </tr>
         <tr>
-            <th>Author</th>
-            <td>{{$book->author}}</td>
+            <th>Job Title</th>
+            <td>{{$employee->job_title}}</td>
         </tr>
         <tr>
-            <th>Stock</th>
-            <td>{{$book->stock}}</td>
+            <th>Joining Date</th>
+            <td>{{$employee->joining_date}}</td>
         </tr>
         <tr>
-            <th>Price</th>
-            <td>{{$book->price}}</td>
+            <th>Salary</th>
+            <td>{{$employee->salary}}</td>
+        </tr>
+        <tr>
+            <th>E-Mail</th>
+            <td>{{$employee->email}}</td>
+        </tr>
+        <tr>
+            <th>Mobile No</th>
+            <td>{{$employee->mobile_no}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{$employee->address}}</td>
         </tr>
     </table>
 
-    <p class="text-start"><a href="{{route('employees.index')}}" class="btn btn-danger">Back</a></p>
+    <p class="text-start"><a href="{{route('employee.index')}}" class="btn btn-danger">Back</a></p>
 @endsection

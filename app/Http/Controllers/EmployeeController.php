@@ -38,7 +38,7 @@ class EmployeeController extends Controller
             'joining_date'  => 'required|date',
             'salary'  => 'required|numeric',
             'email' => 'email',
-            'mobile_no' => 'required|numeric|max:12',
+            'mobile_no' => 'required|numeric',
             'address' => 'required',
         ]);
 
@@ -63,14 +63,14 @@ class EmployeeController extends Controller
             'joining_date'  => 'required|date',
             'salary'  => 'required|numeric',
             'email' => 'email',
-            'mobile_no' => 'required|numeric|max:12',
+            'mobile_no' => 'required|numeric',
             'address' => 'required',
         ]);
 
         $employee = Employee::find($request->id);
         $employee->update($request->all());
 
-        return redirect()->route('employees.index');
+        return redirect()->route('employee.index');
     }
 
     public function destroy(Request $request, $id)
@@ -78,7 +78,7 @@ class EmployeeController extends Controller
         $employee = Employee::find($id);
         $employee->delete();
 
-        return redirect()->route('employees.index');
+        return redirect()->route('employee.index');
     }
 
 }
